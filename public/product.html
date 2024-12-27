@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Page</title>
+</head>
+<body>
+    <header>
+        <h1>Product Page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Product Details</h2>
+        <div id="product-list">
+            <div class="product-card">
+                <h3>Wireless Bluetooth Headphones</h3>
+                <p>Over-ear wireless headphones with noise cancellation and 20-hour battery life.</p>
+                <p>Price: ₹4,149</p>
+                <button class="add-to-cart" onclick="addToCart('Wireless Bluetooth Headphones', 4149)">Add to Cart</button>
+                <img src="images/product1/1.jpeg" alt="Wireless Bluetooth Headphones">
+            </div>
+            <div class="product-card">
+                <h3>Smart Fitness Tracker</h3>
+                <p>Tracks heart rate, steps, sleep patterns, and features a waterproof design.</p>
+                <p>Price: ₹4,979</p>
+                <button class="add-to-cart" onclick="addToCart('Smart Fitness Tracker', 4979)">Add to Cart</button>
+                <img src="images/product2/2.jpeg" alt="Smart Fitness Tracker">
+            </div>
+            <div class="product-card">
+                <h3>Gaming Mouse (RGB)</h3>
+                <p>Ergonomic gaming mouse with customizable RGB lighting and 8 programmable buttons.</p>
+                <p>Price: ₹3,319</p>
+<img src="images/product3/3.jpeg" alt="Gaming Mouse (RGB)">
+                <button class="add-to-cart" onclick="addToCart('Gaming Mouse (RGB)', 3319)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Professional DSLR Camera</h3>
+                <p>24 MP DSLR camera with a 50mm lens, 4K video recording, and WiFi connectivity.</p>
+                <p>Price: ₹74,669</p>
+<img src="images/product4/4.jpeg" alt="Professional DSLR Camera">
+                <button class="add-to-cart" onclick="addToCart('Professional DSLR Camera', 74669)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Smart LED TV (43-inch)</h3>
+                <p>Full HD Smart LED TV with built-in streaming apps, 3 HDMI ports, and 2 USB ports.</p>
+                <p>Price: ₹32,999</p>
+<img src="images/product5/5.jpeg" alt="Smart LED TV (43-inch)">
+                <button class="add-to-cart" onclick="addToCart('Smart LED TV (43-inch)', 32999)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Portable Bluetooth Speaker</h3>
+                <p>Compact Bluetooth speaker with 12-hour battery life and water-resistant design.</p>
+                <p>Price: ₹2,489</p>
+<img src="images/product6/6.jpeg" alt="Portable Bluetooth Speaker">
+                <button class="add-to-cart" onclick="addToCart('Portable Bluetooth Speaker', 2489)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Wireless Charging Dock</h3>
+                <p>Multi-device wireless charger compatible with smartphones, smartwatches, and earbuds.</p>
+                <p>Price: ₹2,159</p>
+<img src="images/product7/7.jpeg" alt="Wireless Charging Dock">
+                <button class="add-to-cart" onclick="addToCart('Wireless Charging Dock', 2159)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>High-Speed USB Flash Drive (128GB)</h3>
+                <p>USB 3.1 flash drive with 128GB storage, 300 MB/s read speed, and durable metal casing.</p>
+                <p>Price: ₹1,659</p>
+<img src="images/product8/8.jpeg" alt="High-Speed USB Flash Drive (128GB)">
+                <button class="add-to-cart" onclick="addToCart('High-Speed USB Flash Drive (128GB)', 1659)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Noise-Cancelling Earbuds</h3>
+                <p>True wireless earbuds with active noise cancellation, 30-hour battery life, and IPX7 water resistance.</p>
+                <p>Price: ₹5,989</p>
+<img src="images/product9/9.jpeg" alt="Noise-Cancelling Earbuds">
+                <button class="add-to-cart" onclick="addToCart('Noise-Cancelling Earbuds', 5989)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <h3>Smart Home Security Camera</h3>
+                <p>1080p HD security camera with night vision, motion detection, and app control.</p>
+                <p>Price: ₹3,749</p>
+<img src="images/product10/10.jpeg" alt="Smart Home Security Camera">
+                <button class="add-to-cart" onclick="addToCart('Smart Home Security Camera', 3749)">Add to Cart</button>
+            </div>
+        </div>
+        <script>
+            function addToCart(productName, productPrice) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name: productName, price: productPrice });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${productName} has been added to your cart!`);
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-commerce Website</p>
+    </footer>
+</body>
+</html>
